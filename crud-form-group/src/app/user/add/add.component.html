@@ -1,0 +1,49 @@
+<form [formGroup]="addForm">
+  <div formGroupName="name" class="form-row">
+    <div class="form-group col-md-6">
+      <label for="firstname">First Name</label>
+      <input type="text" class="form-control" name="firstname" formControlName="first" id="firstname">
+      <span *ngIf="addForm.get('name.first').invalid && addForm.get('name.first').touched">
+        First name is required and should be between 3 and 10 characters.
+      </span>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="lastname">Last Name</label>
+      <input type="text" class="form-control" name="lastname" formControlName="last" id="lastname">
+      <span *ngIf="addForm.get('name.last').invalid && addForm.get('name.last').touched">
+        Last name is required and should be between 3 and 10 characters.
+      </span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="birthdate">Birthdate</label>
+    <input type="date" class="form-control" name="birthdate" formControlName="birthdate" id="birthdate">
+    <span *ngIf="addForm.get('birthdate').invalid && addForm.get('birthdate').touched">
+      Birthdate is required.
+    </span>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" name="email" formControlName="email" id="email">
+    <span *ngIf="addForm.get('email').invalid && addForm.get('email').touched">
+      Email is required and should be a valid email address.
+    </span>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="phone">Phone</label>
+      <input type="text" class="form-control" name="phone" formControlName="phone" id="phone">
+      <span *ngIf="addForm.get('phone').invalid && addForm.get('phone').touched">
+        Phone is required.
+      </span>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="address">Address</label>
+      <input type="text" class="form-control" name="address" formControlName="address" id="address">
+      <span *ngIf="addForm.get('address').invalid && addForm.get('address').touched">
+        Address is required.
+      </span>
+    </div>
+  </div>
+  <button type="button" class="btn btn-success" (click)="onAdd()">Add</button>
+</form>

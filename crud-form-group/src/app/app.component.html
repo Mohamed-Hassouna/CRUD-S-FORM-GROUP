@@ -1,0 +1,20 @@
+<div class="container-md">
+  <nav class="navbar navbar-expand-lg navbar-light bg-custom shadow-sm p-3 mb-5 bg-white rounded">
+    <img src="../assets/images/router.svg" alt="Logo" width="40" height="">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-flex justify-content-around" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold" [routerLink]="['user']" routerLinkActive="active">user</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font-weight-bold " [routerLink]="['file']" routerLinkActive="active">file</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

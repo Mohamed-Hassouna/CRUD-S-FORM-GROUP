@@ -1,0 +1,18 @@
+<table class="table table-striped shadow-sm p-3 mb-5 bg-white rounded">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">name</th>
+        <th scope="col">description</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let file of data">
+        <td>{{file.id}}</td>
+        <td>{{file.name}}</td>
+        <td>{{file.description}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
